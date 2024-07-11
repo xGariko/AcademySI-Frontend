@@ -1,0 +1,92 @@
+#category-list-container{
+    background: var(--foreground);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+
+
+.carousel-container{
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--background) !important;
+}
+
+.carousel{
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+  height: auto;
+}
+
+.carousel-inner .col-3 {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+
+.carousel-container {
+  position: relative;
+}
+
+.carousel-container .carousel-control-prev,
+.carousel-container .carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5%;
+  height: 100%;
+}
+
+.carousel-container .carousel-control-prev {
+  left: 0;
+}
+
+.carousel-container .carousel-control-next {
+  right: 0;
+}
+
+
+.card{
+  width: 70%;
+}
+
+
+.row > div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.col{
+  flex: none !important;
+}
+
+i{
+  color: var(--foreground);
+  margin: 0 10px 0 10px;
+}
+
+.row{
+  width: 70%;
+}
+
+h3{
+  color: var(--foreground);
+  font-weight: 600;
+}

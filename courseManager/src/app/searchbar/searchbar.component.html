@@ -1,0 +1,10 @@
+<div class="container mt-3 mb-3">
+  <div class="row">
+    <div class="col-md-12 m-4 d-flex justify-content-center">
+      <div class="d-flex w-lg-50 w-75">
+        <input [(ngModel)]="inputValue" (keyup.enter)="search()" class="form-control me-2" type="search" placeholder="Find the perfect course for you" aria-label="Search">
+        <button (click)="search()" class="btn btn-outline-success d-flex"> <i class="bi bi-search"></i><p class="d-lg-block d-none ms-3 m-0">Search</p></button>
+      </div>
+    </div>
+  </div>
+</div>

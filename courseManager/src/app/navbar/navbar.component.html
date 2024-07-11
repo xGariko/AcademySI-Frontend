@@ -1,0 +1,68 @@
+<nav class="navbar fixed-top navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img id="navbar-logo" class="me-1" src="LogoSolo.svg" alt="">
+      <span id="nav-title" class="text-uppercase">Skill Spring</span>
+    </a>
+    <div class="d-none d-lg-block vr"></div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" *ngIf="!isAuthenticated; else loggedInNavbar">
+      <ul class="navbar-nav me-auto mb-2 p-2 mb-lg-0">
+
+        <li class="nav-item d-lg-block d-flex align-content-end justify-content-end">
+          <span class="nav-link" (click)="smoothScroll('course-list')" >Our courses</span>
+        </li>
+        <li class="nav-item d-lg-block d-flex align-content-end justify-content-end">
+          <span class="nav-link" (click)="smoothScroll('about-us')">About Us</span>
+        </li>
+        <li class="nav-item d-lg-block d-flex align-content-end justify-content-end">
+          <span class="nav-link" (click)="smoothScroll('contacts-form')">Contacts</span>
+        </li>
+      </ul>
+      <div class="row d-flex d-lg-block me-lg-2 align-content-end justify-content-end">
+        <div class="col-3 col-lg-12 d-flex align-content-end justify-content-end">
+          <button class="btn btn-primary text-center d-flex align-content-center justify-content-center" (click)="goToLogin()" routerLink="/login" type="button">Login <i class="bi bi-box-arrow-in-right"></i></button>
+        </div>
+      </div>
+    </div>
+    <ng-template #loggedInNavbar>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 p-2 mb-lg-0">
+          <li class="nav-item d-lg-block d-flex align-content-end justify-content-end">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item d-lg-block d-flex align-content-end justify-content-end">
+            <a class="nav-link" href="#category-list">Our courses</a>
+          </li>
+          <li class="nav-item d-lg-block d-flex align-content-end justify-content-end">
+            <a class="nav-link" href="#about-us">About Us</a>
+          </li>
+          <li class="nav-item d-lg-block d-flex align-content-end justify-content-end">
+            <a class="nav-link" href="#contacts-form">Contacts</a>
+          </li>
+        </ul>
+        <div class="d-flex me-lg-2 align-content-end justify-content-end">
+          <div class="col-3 col-lg-12 d-flex align-content-end justify-content-end">
+
+          </div>
+
+          <div id="profileDropdown" class="nav-item dropdown ms-4 me-2 d-lg-block d-flex align-content-center justify-content-center">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-person-circle"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a id="profileLinkButton" class="dropdown-item" href="#">Profile</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li class="p-2">
+                <button id="logoutButton" class="btn btn-primary text-center " (click)="logout()" type="button"><i class="bi bi-box-arrow-in-left"></i> Logout</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</nav>

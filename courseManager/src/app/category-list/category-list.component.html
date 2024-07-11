@@ -1,0 +1,67 @@
+<!--
+<div id="category-list-container" class="p-5 mt-5">
+    <h3 class="text-uppercase mb-5">Main categories</h3>
+    <div class="row">
+        <div class="col-12 col-lg-6 col-xl-6 col-xxl-3 mb-4">
+            <app-category-card class="col" imageUrl="categoryIcons/uidesign-cat-icon.svg" title="UI Design"></app-category-card>
+        </div>
+        <div class="col-12 col-lg-6 col-xl-6 col-xxl-3 mb-4">
+            <app-category-card class="col" imageUrl="categoryIcons/buisness-cat-icon.svg" title="Buisness"></app-category-card>
+        </div>
+        <div class="col-12 col-lg-6 col-xl-6 col-xxl-3 mb-4">
+            <app-category-card class="col" imageUrl="categoryIcons/coding-cat-icon.svg" title="Coding"></app-category-card>
+        </div>
+        <div class="col-12 col-lg-6 col-xl-6 col-xxl-3 mb-4 d-flex align-content-center justify-content-center">
+            <app-category-card class="col" imageUrl="categoryIcons/music-cat-icon.svg" title="Music"></app-category-card>
+        </div>
+        <div class="col-12 col-lg-6 col-xl-6 col-xxl-3 mb-4">
+            <app-category-card class="col" imageUrl="categoryIcons/selfimproovement-cat-icon.svg" title="Self Improovement"></app-category-card>
+        </div>
+        <div class="col-12 col-lg-6 col-xl-6 col-xxl-3 mb-4">
+            <app-category-card class="col" imageUrl="categoryIcons/photography-cat-icon.svg" title="Photography"></app-category-card>
+        </div>
+        <div class="col-12 col-lg-6 col-xl-6 col-xxl-3 mb-4">
+            <app-category-card class="col" imageUrl="categoryIcons/marketing-cat-icon.svg" title="Marketing"></app-category-card>
+        </div>
+        <div class="col-12 col-lg-6 col-xl-6 col-xxl-3 mb-4">
+            <app-category-card class="col" imageUrl="categoryIcons/dataanalysis-cat-icon.svg" title="Data Analysis"></app-category-card>
+        </div>
+    </div>
+</div>
+-->
+<!-- your-component.component.html -->
+<div class="carousel-container w-100 mt-5 pe-0 ps-0 me-0 ms-0 mb-5 pt-5 pb-5">
+  <h3 class="text-uppercase text-center"><i class="bi bi-tags-fill"></i>Main Categories</h3>
+  <div id="carouselExampleControls" class="carousel slide m-5 p-5 d-xxl-block d-none" >
+    <div class="carousel-inner">
+
+      <div *ngFor="let categoryWrap of categories; let i = index" class="carousel-item" [class.active]="i === 0">
+        <div class="row w-100 d-flex align-content-center justify-content-center">
+          <div *ngFor="let category of categoryWrap" class="col-3 d-flex align-content-center justify-content-center pt-2 pb-2">
+            <app-category-card [title]="category.title" [imageUrl]="category.imgUrl"></app-category-card>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div *ngFor="let categoryWrap of categories; let i = index" class="carousel-item d-xxl-none d-block" [class.active]="i === 0">
+    <div class="row w-100 d-flex align-content-center justify-content-center">
+      <div *ngFor="let category of categoryWrap" class="col-12 d-flex align-content-center justify-content-center pt-2 pb-2">
+        <app-category-card [title]="category.title" [imageUrl]="category.imgUrl" [description]="category.description"></app-category-card>
+      </div>
+    </div>
+  </div>
+
+</div>
+

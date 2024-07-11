@@ -1,0 +1,83 @@
+#navbar-logo{
+  width:50px;
+  height:50px;
+
+}
+
+.navbar{
+  background: var(--background) !important;
+  filter: drop-shadow(0px 0px 7px var(--background));
+}
+
+.navbar *{
+  color: var(--foreground);
+}
+
+#nav-title{
+  padding: 0 10px 0 10px;
+  font-weight: 600;
+}
+
+#profileDropdown ul {
+  width: 10vw;
+}
+
+#profileDropdown ul > li{
+  width: 100%;
+}
+
+#profileDropdown ul > li > *{
+  width: 100%;
+}
+
+#profileDropdown i{
+  font-size: 3.5ch;
+}
+
+#logoutButton{
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+#logoutButton i{
+  margin-right: 10px;
+}
+
+#profileLinkButton{
+  font-size: 14pt;
+}
+
+#profileLinkButton:hover{
+  background: var(--background) !important;
+}
+
+ul{
+  background: var(--background) !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(229, 239, 239, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+ul > li:hover{
+  background: var(--background) !important;
+  color: var(--highlight-foreground) !important;
+}
+
+.nav-item span{
+  transition: .2s;
+  cursor: pointer;
+}
+
+.nav-item span:hover{
+  color: var(--highlight-foreground) !important;
+}
+
+.navbar-toggler{
+  border: none;
+}
+
+.navbar-toggler span{
+  color: 1px solid var(--foreground);
+}

@@ -1,0 +1,31 @@
+#aboutus-values-section{
+  border: 2px solid var(--background);
+  color: var(--foreground);
+  border-radius: 12px;
+}
+
+#aboutus-values-section > h3{
+  color: var(--background);
+}
+
+ul{
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+strong{
+  color: var(--background);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+li{
+  padding: 5px 20px 5px 20px;
+}
+
+li:not(li:first-child){
+  border-left: 1px solid var(--background);
+}
+

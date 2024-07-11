@@ -1,0 +1,19 @@
+<div>
+  <div class="card course-card text-center" style="width: 18rem;">
+    <img src="{{imageUrl}}" class="card-img-top" (error)="onImageError($event)" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{title}}</h5>
+      <p class="card-text card-description">{{desc}}</p>
+      <div id="ratingContainer" class="star-rating" #ratingContainer>
+
+      </div>
+      <p class="card-text mt-1">({{ratingsCount}})</p>
+
+      <p class="card-text mt-3"><strong>{{price}}</strong></p>
+
+    </div>
+  </div>
+</div>
+
+
+

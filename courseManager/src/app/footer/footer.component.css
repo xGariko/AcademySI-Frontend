@@ -1,0 +1,17 @@
+*{
+  color: var(--foreground);
+}
+
+footer{
+  background: var(--background);
+  color: var(--foreground) !important;
+  width: 100%;
+}
+
+i{
+  margin: 0 5px 0 0;
+}
+
+h5{
+  color: var(--highlight-foreground);
+}

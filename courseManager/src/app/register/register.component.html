@@ -1,0 +1,63 @@
+<div id="main-login-container">
+  <div class="row justify-content-center">
+    <div id="register-banner" class="col-md-6 d-none d-xxl-flex">
+
+      <img src="formIllustration.svg" alt="">
+      <div id="formIllustrationCaption" class="text-uppercase fst-italic">
+        <img src="LogoSoloDark.svg" width="100" height="100" alt="">
+        <h2>Join us, and start your <strong>learning journey</strong></h2>
+      </div>
+    </div>
+    <div class="col-md-6 col-12 p-5">
+      <div class="card m-5">
+
+        <div class="card-body">
+          <form (ngSubmit)="submit(registerForm)" #registerForm="ngForm">
+            <div class="form-floating mb-3">
+              <input [(ngModel)]="this.firstName" type="text" class="form-control" id="floatingFirstName" name="firstName" placeholder="First Name" required>
+              <label for="floatingFirstName">First Name</label>
+              <div *ngIf="registerForm.controls.firstName?.invalid && registerForm.controls.firstName?.touched" class="text-danger">
+                First name is required.
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <input [(ngModel)]="this.lastName" type="text" class="form-control" id="floatingLastName" name="lastName" placeholder="Last Name" required>
+              <label for="floatingLastName">Last Name</label>
+              <div *ngIf="registerForm.controls.lastName?.invalid && registerForm.controls.lastName?.touched" class="text-danger">
+                Last name is required.
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <input [(ngModel)]="this.email" type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" name="email" required email pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$">
+              <label for="floatingEmail">Email address</label>
+              <div *ngIf="registerForm.controls.email?.invalid && registerForm.controls.email?.touched" class="text-danger">
+                Please enter a valid email address.
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <input [(ngModel)]="this.password" name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password" required minlength="6">
+              <label for="floatingPassword">Password</label>
+              <div *ngIf="registerForm.controls.password?.invalid && registerForm.controls.password?.touched" class="text-danger">
+                Password must be at least 6 characters long.
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <input [(ngModel)]="this.confirmPassword" name="confirmPassword" type="password" class="form-control" id="floatingConfirmPassword" placeholder="Confirm Password" required>
+              <label for="floatingConfirmPassword">Confirm Password</label>
+              <div *ngIf="registerForm.controls.confirmPassword?.invalid && registerForm.controls.confirmPassword?.touched" class="text-danger">
+                Please confirm your password.
+              </div>
+              <div *ngIf="this.password !== this.confirmPassword && registerForm.controls.confirmPassword?.touched" class="text-danger">
+                Passwords do not match.
+              </div>
+            </div>
+            <button type="submit" class="btn w-100 text-uppercase" [disabled]="registerForm.invalid">Register</button>
+            <div *ngIf="errorMessage" class="alert alert-danger mt-2">{{ errorMessage }}</div>
+            <div *ngIf="successMessage" class="alert alert-success mt-2">{{ successMessage }}</div>
+            <p class="goToLoginButton mt-4" (click)="goToLogin()">Already have an account? Login</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

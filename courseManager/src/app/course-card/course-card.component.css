@@ -1,0 +1,32 @@
+.course-card{
+  transition: .2s;
+  cursor: pointer;
+  height: 425px !important;
+  min-height: 425px !important;
+  margin:0;
+
+}
+
+.card-description,
+.card-title{
+  min-height: 50px;
+  max-height: 50px;
+}
+
+
+.card-img-top{
+  width: 100%;
+  height: 175px;
+  max-height: 200px;
+}
+
+.course-card:hover {
+  transition: .2s;
+  border: 1px solid var(--background);
+  transform: translate(0, -5px);
+}
+
+.star-rating > i{
+  color: #d9b31d;
+}
+

@@ -1,0 +1,76 @@
+.card-header, .card-footer{
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.card-header i{
+  color: var(--highlight-foreground);
+}
+
+.card-footer a{
+  color: var(--foreground);
+}
+
+#main-login-container{
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#register-banner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#register-banner img{
+  width: 70%;
+}
+
+#register-banner div{
+  margin-top: 10%;
+}
+
+
+
+#formIllustrationCaption{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+}
+
+#formIllustrationCaption img{
+  width: 20%;
+  padding: 5px;
+}
+
+#login-button{
+  font-weight: 600;
+}
+
+#formIllustrationCaption h2{
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  word-break: keep-all;
+}
+
+a{
+  color: var(--background);
+}
+
+a:hover{
+  color: var(--acqua-green-hover) !important;
+}
+
+button{
+  background: var(--acqua-green);
+}
+
+button:hover  {
+  background: var(--acqua-green-hover);
+}
